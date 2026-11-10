@@ -26,7 +26,7 @@ export function ServiceCard({ service }: { service: Service }) {
       <p className="flex-1 text-sm leading-relaxed text-muted">{service.description}</p>
       <Button
         as={Link}
-        to={`${ROUTES.services}#${service.slug}`}
+        to={`${ROUTES.services}#${service.anchor}`}
         variant="link"
         withArrow
         className="self-start text-primary"

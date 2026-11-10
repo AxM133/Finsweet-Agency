@@ -10,7 +10,7 @@ export const PAGE_LINKS = [
 
 export const SERVICE_LINKS = [
   { label: 'Technical support', to: `${ROUTES.services}#technical-support` },
-  { label: 'Testing', to: `${ROUTES.services}#testing` },
+  { label: 'Testing', to: `${ROUTES.services}#process` },
   { label: 'Development', to: `${ROUTES.services}#development` },
   { label: 'AWS/Azure', to: `${ROUTES.services}#aws-azure` },
   { label: 'Consulting', to: `${ROUTES.services}#consulting` },

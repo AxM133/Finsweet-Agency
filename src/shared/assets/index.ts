@@ -8,6 +8,11 @@ import officeLounge from './images/office-lounge.jpg'
 import office1 from './images/office-1.jpg'
 import office2 from './images/office-2.jpg'
 import office3 from './images/office-3.jpg'
+import service1 from './images/service-1.jpg'
+import service2 from './images/service-2.jpg'
+import service3 from './images/service-3.jpg'
+import service4 from './images/service-4.jpg'
+import service5 from './images/service-5.jpg'
 import team1 from './images/team-1.jpg'
 import team2 from './images/team-2.jpg'
 import team3 from './images/team-3.jpg'
@@ -22,6 +27,11 @@ export const images = {
   office2,
   office3,
   officeLounge,
+  service1,
+  service2,
+  service3,
+  service4,
+  service5,
   team1,
   team2,
   team3,

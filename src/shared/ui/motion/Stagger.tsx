@@ -8,16 +8,21 @@ const itemVariants: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
 }
 
-type StaggerProps = HTMLMotionProps<'div'> & { interval?: number }
+type StaggerProps = HTMLMotionProps<'div'> & {
+  /** Pause between children, seconds. */
+  interval?: number
+  /** Pause before the first child, seconds. */
+  delay?: number
+}
 
 /** Reveals its `StaggerItem` descendants one after another on scroll. */
-export function Stagger({ interval = 0.12, ...rest }: StaggerProps) {
+export function Stagger({ interval = 0.12, delay = 0, ...rest }: StaggerProps) {
   return (
     <motion.div
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: '-80px' }}
-      variants={{ hidden: {}, show: { transition: { staggerChildren: interval } } }}
+      variants={{ hidden: {}, show: { transition: { staggerChildren: interval, delayChildren: delay } } }}
       {...rest}
     />
   )

@@ -8,7 +8,7 @@ type ProcessProps = {
 
 export function Process({ tone = 'white' }: ProcessProps) {
   return (
-    <Section tone={tone} aria-labelledby="process-title">
+    <Section id="process" tone={tone} aria-labelledby="process-title">
       <div className="flex items-start justify-between gap-8">
         <Reveal className="flex max-w-xl flex-col gap-6">
           <Eyebrow>Our Process</Eyebrow>

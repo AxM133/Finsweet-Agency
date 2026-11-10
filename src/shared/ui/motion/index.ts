@@ -1,5 +1,6 @@
 export { CountUp } from './CountUp'
 export { EASE } from './ease'
+export { ImageReveal } from './ImageReveal'
 export { ParallaxImage } from './ParallaxImage'
 export { Reveal } from './Reveal'
 export { Stagger, StaggerItem } from './Stagger'
