@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { generatePath, Link } from 'react-router'
 
 import { ROUTES } from '@/shared/config'
 import { formatDate } from '@/shared/lib'
@@ -8,7 +8,7 @@ import type { Post } from '../model/schema'
 
 /** Horizontal card: photo on the left, text on the right. */
 export function PostCard({ post }: { post: Post }) {
-  const href = ROUTES.blogPost.replace(':slug', post.slug)
+  const href = generatePath(ROUTES.blogPost, { slug: post.slug })
 
   return (
     <Card as="article" variant="flat" className="group flex h-full flex-col overflow-hidden sm:flex-row">

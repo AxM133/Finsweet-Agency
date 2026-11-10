@@ -7,7 +7,7 @@ export const ROUTES = {
   careers: '/careers',
   careerDetails: '/careers/:id',
   contact: '/contact',
-  teamMember: '/team/:id',
+  teamMember: '/team/:slug',
   privacyPolicy: '/privacy-policy',
   /** dev only */
   uiKit: '/ui-kit',
