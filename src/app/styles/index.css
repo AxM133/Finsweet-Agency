@@ -1,1 +1,38 @@
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
 @import "tailwindcss";
+
+/* Design tokens — sampled from the mockups */
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* text */
+  --color-ink: #232536;
+  --color-body: #404150;
+  --color-muted: #7b7c86;
+  --color-line: #d3d3d7;
+
+  /* brand */
+  --color-primary: #444cfc;
+  --color-primary-dark: #3a41dc;
+  --color-brand: #666dff;
+  --color-orange: #ffa155;
+  --color-peach: #ffd3af;
+
+  /* section backgrounds */
+  --color-peach-soft: #ffe6d2;
+  --color-mint: #edf8fa;
+  --color-lavender: #f9f9ff;
+  --color-surface: #f9f9f9;
+
+  --shadow-card: 0 12px 40px rgb(35 37 54 / 0.06);
+}
+
+@layer base {
+  body {
+    background-color: #fff;
+    color: var(--color-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}

@@ -32,4 +32,7 @@ Segments are added when a slice actually needs them.
 
 - Alias `@/` → `src/`.
 - Routes live in `shared/config/routes.ts`; lazy page loading via `app/router/lazy-page.ts`.
+- Design tokens (colors, font, shadow) live in `app/styles/index.css` under `@theme`; use `bg-primary`, `text-ink`, `bg-mint` etc.
+- UI kit: `shared/ui` (import from `@/shared/ui`). Preview in dev: `/ui-kit`.
+- Use `cn()` from `@/shared/lib` to merge classes; polymorphic components (`Button`, `Heading`, `Card`) take an `as` prop.
 - Server data: `shared/api/request.ts` — generic fetcher, response is validated by a zod schema and typed with `z.infer`.

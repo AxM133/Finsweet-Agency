@@ -28,6 +28,9 @@ export const router = createBrowserRouter([
         path: ROUTES.privacyPolicy,
         lazy: lazyPage(() => import('@/pages/privacy-policy'), 'PrivacyPolicyPage'),
       },
+      ...(import.meta.env.DEV
+        ? [{ path: ROUTES.uiKit, lazy: lazyPage(() => import('@/pages/ui-kit'), 'UiKitPage') }]
+        : []),
       { path: '*', lazy: lazyPage(() => import('@/pages/not-found'), 'NotFoundPage') },
     ],
   },

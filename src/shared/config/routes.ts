@@ -9,6 +9,8 @@ export const ROUTES = {
   contact: '/contact',
   teamMember: '/team/:id',
   privacyPolicy: '/privacy-policy',
+  /** dev only */
+  uiKit: '/ui-kit',
 } as const
 
 export type AppRouteKey = keyof typeof ROUTES
