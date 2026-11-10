@@ -38,7 +38,7 @@ export function Button<T extends ElementType = 'button'>({
     <Component
       type={Component === 'button' ? 'button' : undefined}
       className={cn(
-        'inline-flex cursor-pointer items-center justify-center font-medium transition-colors',
+        'group inline-flex cursor-pointer items-center justify-center font-medium transition-colors',
         'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
         'disabled:pointer-events-none disabled:opacity-50',
         variants[variant],
@@ -48,7 +48,7 @@ export function Button<T extends ElementType = 'button'>({
     >
       {variant === 'primary' && <PixelCorner />}
       {children}
-      {withArrow && <ArrowRightIcon className="size-5 shrink-0" />}
+      {withArrow && <ArrowRightIcon className="size-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />}
     </Component>
   )
 }

@@ -35,4 +35,7 @@ Segments are added when a slice actually needs them.
 - Design tokens (colors, font, shadow) live in `app/styles/index.css` under `@theme`; use `bg-primary`, `text-ink`, `bg-mint` etc.
 - UI kit: `shared/ui` (import from `@/shared/ui`). Preview in dev: `/ui-kit`.
 - Use `cn()` from `@/shared/lib` to merge classes; polymorphic components (`Button`, `Heading`, `Card`) take an `as` prop.
+- Forms: `useZodForm({ schema, onSubmit })` from `@/shared/lib` — zod schema gives validation and the typed `values`.
+- Animations: `Reveal`, `Stagger`/`StaggerItem`, `CountUp` from `@/shared/ui` (built on `motion`, respects reduced-motion).
+- No backend yet: entity `api/` files use `mockRequest(schema, data)`; replace with `request(path, schema)` when the API appears.
 - Server data: `shared/api/request.ts` — generic fetcher, response is validated by a zod schema and typed with `z.infer`.
