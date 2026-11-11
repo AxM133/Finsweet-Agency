@@ -4,7 +4,7 @@ import { postQueries, PostCard, PostCardSkeleton } from '@/entities/post'
 import { Heading, List, PixelSquare, QueryState, Reveal, Section, Stagger, StaggerItem } from '@/shared/ui'
 
 export function LatestPostsSection() {
-  const query = useQuery(postQueries.latest(2))
+  const query = useQuery(postQueries.recent(2))
 
   return (
     <Section tone="mint" aria-labelledby="latest-posts-title">

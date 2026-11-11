@@ -4,7 +4,7 @@ const sizes = {
   sm: 'size-8 text-xs',
   md: 'size-12 text-sm',
   lg: 'size-20 text-xl',
-  xl: 'size-72 text-6xl',
+  xl: 'size-64 text-6xl sm:size-80',
 } as const
 
 type AvatarProps = {

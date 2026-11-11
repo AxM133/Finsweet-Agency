@@ -1,10 +1,17 @@
-import type { UseQueryResult } from '@tanstack/react-query'
 import type { ReactNode } from 'react'
 
 import { Button } from '../button'
 
+/** The part of a react-query result (query or infinite query) that QueryState needs. */
+type QueryLike<TData> = {
+  isPending: boolean
+  isError: boolean
+  data: TData | undefined
+  refetch: () => unknown
+}
+
 type QueryStateProps<TData> = {
-  query: UseQueryResult<TData, Error>
+  query: QueryLike<TData>
   skeleton: ReactNode
   children: (data: TData) => ReactNode
 }
@@ -24,6 +31,8 @@ export function QueryState<TData>({ query, skeleton, children }: QueryStateProps
       </div>
     )
   }
+
+  if (query.data === undefined) return skeleton
 
   return children(query.data)
 }

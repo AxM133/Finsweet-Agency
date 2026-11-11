@@ -1,6 +1,7 @@
 @import "@fontsource/poppins/400.css";
 @import "@fontsource/poppins/500.css";
 @import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/800.css";
 @import "tailwindcss";
 
 /* Design tokens — sampled from the mockups */
@@ -26,7 +27,16 @@
   --color-lavender: #f9f9ff;
   --color-surface: #f9f9f9;
 
+  --animate-wave: wave 2.4s ease-in-out infinite;
+
   --shadow-card: 0 12px 40px rgb(35 37 54 / 0.06);
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20%, 40% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
 }
 
 @layer base {

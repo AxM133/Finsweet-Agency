@@ -1,3 +1,5 @@
+import { NotFoundBlock } from '@/widgets/not-found'
+
 export function NotFoundPage() {
-  return <div>NotFoundPage</div>
+  return <NotFoundBlock />
 }

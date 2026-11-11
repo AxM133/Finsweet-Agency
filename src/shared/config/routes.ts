@@ -5,7 +5,7 @@ export const ROUTES = {
   blog: '/blog',
   blogPost: '/blog/:slug',
   careers: '/careers',
-  careerDetails: '/careers/:id',
+  careerDetails: '/careers/:slug',
   contact: '/contact',
   teamMember: '/team/:slug',
   privacyPolicy: '/privacy-policy',
